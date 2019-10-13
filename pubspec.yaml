@@ -60,6 +60,15 @@ flutter:
     - family: Zhi Mang Xing
       fonts:
         - asset: assets/fonts/ZhiMangXing-Regular.ttf
+    - family: Indie Flower
+      fonts:
+        - asset: assets/fonts/IndieFLower-Regular.ttf
+    - family: Fascnite In Line
+      fonts:
+        - asset: assets/fonts/FascinateInline-Regular.ttf
+    - family: Special Elite
+      fonts:
+        - asset: assets/fonts/SpecialElite-Regular.ttf
       
   #
   # For details regarding fonts from package dependencies,

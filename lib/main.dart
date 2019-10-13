@@ -10,16 +10,7 @@ class MyApp extends StatelessWidget {
     return MaterialApp(
       title: 'Flutter Demo',
       theme: ThemeData(
-        // This is the theme of your application.
-        //
-        // Try running your application with "flutter run". You'll see the
-        // application has a blue toolbar. Then, without quitting the app, try
-        // changing the primarySwatch below to Colors.green and then invoke
-        // "hot reload" (press "r" in the console where you ran "flutter run",
-        // or simply save your changes to "hot reload" in a Flutter IDE).
-        // Notice that the counter didn't reset back to zero; the application
-        // is not restarted.
-        primarySwatch: Colors.yellow,
+        primarySwatch: Colors.indigo,
       ),
       home: MyHomePage(),
     );
@@ -27,64 +18,135 @@ class MyApp extends StatelessWidget {
 }
 
 class MyHomePage extends StatelessWidget {
-  final TextStyle _myStyle = TextStyle(
-                fontFamily: 'Zhi Mang Xing',
-                fontSize:30,
-                fontStyle: FontStyle.italic,
-              );
+  final TextStyle _tileTitleStyle =
+      TextStyle(fontFamily: 'Special Elite', fontSize: 30,);
+  final TextStyle _tileSubtitleStyle = TextStyle(
+      fontFamily: 'Indie Flower', fontSize: 25,);
   final double _dividerSize = 5;
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(
-        title: Text("Introduction To Computers"),
-      ),
-      backgroundColor: Colors.yellow[300],
-      body: Padding( 
-        padding:EdgeInsets.only(top: 20) ,
-        child:Center(child: ListView(
-        children: <Widget>[
-          ListTile(
-            title: Text(
-              "Introduction",
-              style: _myStyle ,
-            ),
-            subtitle: Text("Why is it good to learn how computers work"),
-            onTap: (){},
+        appBar: AppBar(
+          title: Text("Introduction To Computers",
+              style: TextStyle(
+                fontFamily: 'Special Elite',
+                fontSize: 25,
+              )),
+        ),
+        backgroundColor: Colors.grey[100],
+        body: Padding(
+          padding: EdgeInsets.only(top: 10),
+          child: ListView(
+            children: <Widget>[
+              Card(
+                margin: EdgeInsets.symmetric(vertical: 16, horizontal: 48),
+                color: Colors.limeAccent,
+                child: Padding(
+                  padding: EdgeInsets.all(15),
+                  child: ListTile(
+                    title: Text(
+                      "Introduction",
+                      style: _tileTitleStyle,
+                    ),
+                    subtitle: Text(
+                      "Why is it good to learn how computers work",
+                      style: _tileSubtitleStyle,
+                    ),
+                    onTap: () {},
+                  ),
+                ),
+              ),
+            
+              Card(
+                margin: EdgeInsets.symmetric(vertical: 16, horizontal: 48),
+                color: Colors.limeAccent,
+                child: Padding(
+                  padding: EdgeInsets.all(12),
+                  child: ListTile(
+                    title: Text("Lesson 1", style: _tileTitleStyle),
+                    subtitle: Text(
+                      "What Do the parts DO",
+                      style: _tileSubtitleStyle,
+                    ),
+                    onTap: () {},
+                  ),
+                ),
+              ),
+            
+               Card(
+                margin: EdgeInsets.symmetric(vertical: 16, horizontal: 48),
+                color: Colors.limeAccent,
+                child: Padding(
+                  padding: EdgeInsets.all(12),
+                child: ListTile(
+                  title: Text(
+                    "Lesson 2",
+                    style: _tileTitleStyle,
+                  ),
+                  subtitle: Text(
+                    "The DOS operating system",
+                    style: _tileSubtitleStyle,
+                  ),
+                  onTap: () {},
+                ),
+              ),
+              ),
+            
+              Card(
+                 margin: EdgeInsets.symmetric(vertical: 16, horizontal: 48),
+                color: Colors.limeAccent,
+                child: Padding(
+                  padding: EdgeInsets.all(12),
+                child: ListTile(
+                  title: Text(
+                    "Lesson 3",
+                    style: _tileTitleStyle,
+                  ),
+                  subtitle: Text(
+                    "Files, the Overview",
+                    style: _tileSubtitleStyle,
+                  ),
+                  onTap: () {},
+                ),
+              ),),
+              
+               Card(
+                  margin: EdgeInsets.symmetric(vertical: 16, horizontal: 48),
+                color: Colors.limeAccent,
+                child: Padding(
+                  padding: EdgeInsets.all(12),
+                child: ListTile(
+                  title: Text(
+                    "Lesson 4",
+                    style: _tileTitleStyle,
+                  ),
+                  subtitle: Text(
+                    "They are Like LP Records",
+                    style: _tileSubtitleStyle,
+                  ),
+                  onTap: () {},
+                ),
+              ),
+              ),
+             
+               Card(
+                  margin: EdgeInsets.symmetric(vertical: 16, horizontal: 48),
+                color: Colors.limeAccent,
+                child: Padding(
+                  padding: EdgeInsets.all(12),
+                child: ListTile(
+                  title: Text(
+                    "Lesson 5",
+                    style: _tileTitleStyle,
+                  ),
+                  subtitle: Text(
+                    "Organizing Files is Like Organizing Refrigerators",
+                    style: _tileSubtitleStyle,
+                  ),
+                  onTap: () {},
+                ),
+              ),)
+            ],
           ),
-          Divider(thickness: _dividerSize,),
-          ListTile(
-            title: Text("Lesson 1", style: _myStyle),
-            subtitle: Text("What Do the parts DO"),
-            onTap: () {},
-          ),
-          Divider(thickness: _dividerSize,),
-          ListTile(
-            title: Text("Lesson 2", style: _myStyle,),
-            subtitle: Text("The DOS operating system"),
-            onTap: (){},
-          ),
-            Divider(thickness: _dividerSize,),
-          ListTile(
-            title: Text("Lesson 3", style: _myStyle,),
-            subtitle: Text("Files, the Overview"),
-            onTap: (){},
-          ),
-          Divider(thickness: _dividerSize,),
-          ListTile(
-            title: Text("Lesson 4", style: _myStyle,),
-            subtitle: Text("They are Like LP Records"),
-            onTap: (){},
-          ),
-          Divider(thickness: _dividerSize,),
-          ListTile(
-            title: Text("Lesson 5", style: _myStyle,),
-            subtitle: Text("Organizing Files is Like Organizing Refrigerators"),
-            onTap: (){},
-          ),
-        ],
-      ),
-    ),
-      )
-    );
+        ));
   }
 }
