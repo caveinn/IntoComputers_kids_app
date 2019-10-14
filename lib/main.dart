@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/semantics.dart';
+import 'pages.dart';
 
 void main() => runApp(MyApp());
 
@@ -22,7 +23,10 @@ class MyHomePage extends StatelessWidget {
       TextStyle(fontFamily: 'Special Elite', fontSize: 30,);
   final TextStyle _tileSubtitleStyle = TextStyle(
       fontFamily: 'Indie Flower', fontSize: 25,);
-  final double _dividerSize = 5;
+
+  void _navigateToPage(BuildContext context){
+    Navigator.push(context, MaterialPageRoute(builder: (context) => introdution() ));
+  }
   Widget build(BuildContext context) {
     return Scaffold(
         appBar: AppBar(
@@ -51,7 +55,9 @@ class MyHomePage extends StatelessWidget {
                       "Why is it good to learn how computers work",
                       style: _tileSubtitleStyle,
                     ),
-                    onTap: () {},
+                    onTap: () {
+                      _navigateToPage(context);
+                    },
                   ),
                 ),
               ),
