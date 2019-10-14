@@ -69,6 +69,9 @@ flutter:
     - family: Special Elite
       fonts:
         - asset: assets/fonts/SpecialElite-Regular.ttf
+    - family: Dosis
+      fonts: 
+        - asset: assets/fonts/Dosis-Regular.ttf
       
   #
   # For details regarding fonts from package dependencies,

@@ -11,5 +11,5 @@ It is important that you learn how to figure out things about computers because 
 So,  lets get started on putting your computer knowledge firmly on the 'logical' side of your brain''';
 
 Widget getIntroduction_data(){
-  return Text(introduction_data, style: TextStyle(fontSize: 20),);
+  return Text(introduction_data, style: TextStyle(fontSize: 24, fontFamily: 'Dosis'),);
 }

@@ -10,7 +10,10 @@ class introdution extends StatelessWidget {
       ),
       body: SingleChildScrollView(
         child: Card(
-          child: getIntroduction_data(),
+          child: Padding(
+            padding: EdgeInsets.all(12),
+            child: getIntroduction_data(),
+          ),
         ),
       ),
     );
